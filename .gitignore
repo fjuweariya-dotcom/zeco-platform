@@ -11,3 +11,6 @@ spark-warehouse/
 *.parquet
 *.pdf
 .DS_Stores
+# Allow project reports in docs folder
+!docs/
+!docs/*.pdf

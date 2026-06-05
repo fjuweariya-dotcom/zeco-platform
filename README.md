@@ -81,6 +81,7 @@ Automated workflows:
 
 Project reports are available in:
 
+
 ```text
 docs/
 ├── Project Proposal

@@ -61,6 +61,7 @@ This will create `data/raw/synthetic_data.csv` that you can use.
 ---
 
 ## 🏗️ Architecture Overview
+<img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/ad6bcd6c-76f2-4a44-923f-ba33da489564" />
 
 ---
 

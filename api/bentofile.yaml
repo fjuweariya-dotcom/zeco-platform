@@ -1,0 +1,11 @@
+service: "zeco_bento_service:ZECOEnergyPredictionService"
+labels:
+  owner: zeco-team
+  project: zeco-intelligent-energy-analytics
+include:
+  - "*.py"
+python:
+  packages:
+    - bentoml
+    - pandas
+    - numpy

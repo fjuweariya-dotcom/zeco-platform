@@ -49,11 +49,11 @@ python scripts/generate_synthetic_data.py --records 10000 --customers 100
 python scripts/generate_synthetic_data.py --records 1000000 --customers 500
 This will create data/raw/synthetic_data.csv that you can use
 
-🏗️ Architecture Overview
+## 🏗️ Architecture Overview
 <img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/202d41a1-efe3-490a-a390-4b9d729710b9" />
 
 
-📦 Project Structure
+## 📦 Project Structure
 text
 zeco-platform/
 ├── data/raw/
@@ -75,7 +75,7 @@ zeco-platform/
 ├── docker-compose.yml                   # Kafka, Zookeeper, MinIO
 ├── requirements.txt                     # Python dependencies
 └── README.md
-🚀 Quick Start
+## 🚀 Quick Start
 Prerequisites
 Docker Desktop (with at least 8 GB memory)
 
@@ -192,7 +192,7 @@ python
 spark.sql("DROP TABLE IF EXISTS zeco.bronze_transactions")
 Then restart the streaming ingestion.
 
-📈 Performance Estimates (for 48M records)
+## 📈 Performance Estimates (for 48M records)
 Stage	Estimated Time
 Kafka Producer	2-3 hours
 Streaming (Bronze)	3-4 hours
@@ -209,7 +209,7 @@ python
 CSV file location
 The default path is data/raw/big1-data.csv. You can change it by modifying the csv_path variable in src/ingestion/kafka_producer.py.
 
-📚 Additional Documentation
+## 📚 Additional Documentation
 Delta Lake
 
 Spark Structured Streaming

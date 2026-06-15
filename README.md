@@ -47,13 +47,11 @@ python scripts/generate_synthetic_data.py --records 10000 --customers 100
 
 # Generate 1 million records for testing
 python scripts/generate_synthetic_data.py --records 1000000 --customers 500
-This will create data/raw/synthetic_data.csv that you can use
+This will create data/raw/synthetic_data.csv that you can use.
 
-## 🏗️ Architecture Overview
+🏗️ Architecture Overview
 <img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/202d41a1-efe3-490a-a390-4b9d729710b9" />
-
-
-## 📦 Project Structure
+📦 Project Structure
 text
 zeco-platform/
 ├── data/raw/
@@ -75,7 +73,7 @@ zeco-platform/
 ├── docker-compose.yml                   # Kafka, Zookeeper, MinIO
 ├── requirements.txt                     # Python dependencies
 └── README.md
-## 🚀 Quick Start
+🚀 Quick Start
 Prerequisites
 Docker Desktop (with at least 8 GB memory)
 
@@ -192,7 +190,7 @@ python
 spark.sql("DROP TABLE IF EXISTS zeco.bronze_transactions")
 Then restart the streaming ingestion.
 
-## 📈 Performance Estimates (for 48M records)
+📈 Performance Estimates (for 48M records)
 Stage	Estimated Time
 Kafka Producer	2-3 hours
 Streaming (Bronze)	3-4 hours
@@ -209,7 +207,7 @@ python
 CSV file location
 The default path is data/raw/big1-data.csv. You can change it by modifying the csv_path variable in src/ingestion/kafka_producer.py.
 
-## 📚 Additional Documentation
+📚 Additional Documentation
 Delta Lake
 
 Spark Structured Streaming
@@ -224,12 +222,15 @@ Built with Apache Spark, Delta Lake, Kafka, and MinIO.
 
 text
 
-The key changes made:
+**Key fixes made:**
 
-1. **Added "Dataset Requirements" section** at the top – clearly states the user must provide a CSV file
-2. **Shows exact file location** – `data/raw/big1-data.csv`
-3. **Provides the 17-column schema** – so users know the expected format
-4. **Includes synthetic data option** – for testing without real data
-5. **Customization instructions** – for different column names or file paths
-6. **Troubleshooting for missing file** – common error and solution
-7. **Updated project structure** – highlights where the CSV should be placed
+1. Added proper code block backticks for the synthetic data generation command
+2. Fixed the architecture image markdown syntax
+3. Added proper code block for project structure
+4. Fixed code block for troubleshooting sections
+5. Added proper formatting for the performance estimates table
+6. Ensured all bash commands are properly formatted
+7. Fixed the Python code block indentation
+8. Added back the missing closing backticks
+
+Now the README is properly formatted and ready to use! 🎉

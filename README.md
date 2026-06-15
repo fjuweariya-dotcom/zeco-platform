@@ -1,90 +1,28 @@
-# ZECO Intelligent Energy Analytics Platform
+# ZECO Fraud Detection Platform
 
-## Architecture
+A real‑time fraud detection system for prepaid electricity vending transactions. The pipeline ingests CSV data (or streams from Kafka), stores raw data in a Delta Lake (Bronze layer), cleans and enriches it (Silver layer), aggregates features (Gold layer), and finally applies rule‑based + unsupervised machine learning (Isolation Forest) to flag suspicious meters. All metrics are exposed to Prometheus and visualised in Grafana.
 
-![Architecture](docs/dashboard_screenshots/architecture_diagram.png)
+---
 
-## Features
+## 🏗️ Architecture Overview
+<img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/80aeb16a-9fed-4773-a27c-aadf7fe7acc4" />
 
-- Real-Time Streaming Analytics
-- Revenue Protection & Fraud Detection
-- ARIMA Revenue Forecasting
-- Prophet Token Forecasting
-- Airflow Workflow Automation
-- Spark Lakehouse Architecture
-- Streamlit Business Dashboards
+---
 
-## Dashboard Screenshots
+## 🚀 Quick Start
 
-### KPI Dashboard
+### Prerequisites
 
-![KPI](docs/dashboard_screenshots/kpi_dashboard.png)
+- Docker Desktop (with at least 8 GB memory)
+- Python 3.9+ virtual environment
+- Git (optional)
 
-### Live Streaming Analytics
+### 1. Clone & setup environment
 
-![Live Streaming](docs/dashboard_screenshots/live_streaming.png)
-
-### Revenue Analytics
-
-![Revenue Analytics](docs/dashboard_screenshots/revenue_analytics.png)
-
-### Town Analytics
-
-![Town Analytics](docs/dashboard_screenshots/town_analytics.png)
-
-### Fraud & Anomaly Dashboard
-
-![Fraud Dashboard](docs/dashboard_screenshots/Fraud%20%26%20Anomaly.png)
-
-### Fraud Indicators
-
-![Fraud Indicators](docs/dashboard_screenshots/Fraud_Indicator.png)
-
-### Suspicious Customer Explorer
-
-![Suspicious Customers](docs/dashboard_screenshots/suspicious_customers.png)
-
-### Prophet Forecast
-
-![Forecast](docs/dashboard_screenshots/prophet_forecast.png)
-
-## Machine Learning Components
-
-### Revenue Protection
-
-- Isolation Forest anomaly detection
-- Risk scoring framework
-- Fraud indicator generation
-- Revenue-at-risk estimation
-
-### Forecasting
-
-- ARIMA Revenue Forecasting
-- Prophet Token Depletion Forecasting
-
-## Workflow Orchestration
-
-Apache Airflow DAG:
-
-```text
-dags/zeco_pipeline_dag.py
-```
-
-Automated workflows:
-
-1. Revenue Protection Anomaly Detection
-2. ARIMA Forecast Generation
-3. Prophet Forecast Generation
-4. Gold Layer Analytics Refresh
-
-## Documentation
-
-Project reports are available in:
-
-
-```text
-docs/
-├── Project Proposal
-├── Progress Report
-└── Dashboard Screenshots
-```
+```bash
+git clone <your-repo-url>
+cd zeco-platform
+python -m venv venv
+source venv/bin/activate      # Linux/Mac
+venv\Scripts\activate          # Windows
+pip install -r requirements.txt

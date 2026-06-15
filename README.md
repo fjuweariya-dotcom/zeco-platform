@@ -50,7 +50,8 @@ python scripts/generate_synthetic_data.py --records 1000000 --customers 500
 This will create data/raw/synthetic_data.csv that you can use.
 
 #🏗️ Architecture Overview
-<img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/202d41a1-efe3-490a-a390-4b9d729710b9" />
+<img width="1188" height="732" alt="architecture" src="https://github.com/user-attachments/assets/900db45b-39db-4786-a86b-ee06bbdb9678" />
+
 #📦 Project Structure
 text
 zeco-platform/

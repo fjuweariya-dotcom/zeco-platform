@@ -11,30 +11,6 @@ A real‑time fraud detection system for prepaid electricity vending transaction
 
 ---
 
-## 📦 Project Structure
-zeco-platform/
-├── data/raw/
-│ └── big1-data.csv # Input CSV (17 columns)
-├── scripts/
-│ ├── init_delta_tables.py # Create Bronze/Silver/Gold tables
-│ ├── clear_all_data.py # Reset all data (MinIO + metastore)
-│ └── generate_synthetic_data.py # Generate synthetic test data
-├── src/
-│ ├── ingestion/
-│ │ ├── kafka_producer.py # Sends CSV to Kafka (unlimited)
-│ │ └── streaming_ingestion.py # Kafka → Bronze (structured streaming)
-│ ├── processing/
-│ │ ├── bronze_to_silver.py # Clean & enrich → Silver
-│ │ └── silver_to_gold.py # Feature aggregation → Gold
-│ └── ml/
-│ └── isolation_forest.py # Combined rule + ML fraud detection
-├── docker-compose.yml # Kafka, Zookeeper, MinIO
-├── requirements.txt # Python dependencies
-└── README.md
-
-text
-
----
 
 ## 🚀 Quick Start
 
